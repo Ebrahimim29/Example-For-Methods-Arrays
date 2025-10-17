@@ -56,5 +56,15 @@ Object.entries(scores).forEach(([name,score])=>{
 });
 console.log(`${topName} has the highest score of ${topScore}`);
 
+//---------Example 4:
+const settings = {sound: true, difficulty:"hard", controls: {jump:"space"}};
+
+//StructuredClone:
+const clone = structuredClone(settings);
+clone.controls.jump = "shift";
+
+console.log("Original:", settings.controls.jump);
+console.log("Clone:", clone.controls.jump);
+
 
 
